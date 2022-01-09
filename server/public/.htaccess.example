@@ -1,0 +1,35 @@
+DirectorySlash Off
+Options -Indexes
+DirectoryIndex index.php
+
+<Files ~ "\.(html|php|css|js)$">
+Header add Pragma "no-cache"
+Header set Cache-Control no-cache
+</Files>
+
+# 環境により
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+
+# ファイル圧縮
+<IfModule mod_deflate.c>
+  <FilesMatch ".(js|css|html|php|txt)$">
+  SetOutputFilter DEFLATE
+  </FilesMatch>
+</IfModule>
+
+# Rewrite
+RewriteEngine on
+
+#RewriteCond %{HTTP_HOST} !^localhost
+#RewriteRule ^(.*)$ http://localhost/$1 [R=301,L]
+
+# 静的なファイル以外のアクセスをフロントコントローラーに流す
+RewriteCond %{REQUEST_FILENAME} !^(.*)\.(html|css|js|gif|png|jpg|ico|pdf|woff2|woff|eot|ttf|xls|xlsx|csv|tsv)$ [NC]
+RewriteRule ^.*$ index.php [L]
+
+#php_value memory_limit 1024M
+#php_value post_max_size 200M
+#php_value upload_max_filesize 150M
+#php_value max_input_vars 50000

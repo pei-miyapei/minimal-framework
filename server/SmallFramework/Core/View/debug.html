@@ -1,0 +1,123 @@
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/github.min.css"> -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/lightfair.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous" async></script>
+<style>
+div.debug * {
+    word-break: break-all;
+    font-size: 12px;
+    line-height: 1.2;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+div.debug {
+    margin: auto 0;
+    padding: 5px;
+    background-color: #fff;
+    color: #333;
+}
+div.debug h4,
+div.debug h5 {
+    font-weight: normal;
+}
+div.debug h4 {
+    margin: 0;
+}
+div.debug h5 {
+    margin: 10px 0 5px 0;
+    display: block;
+    color: #00f;
+    cursor: pointer;
+}
+div.debug table {
+    table-layout: fixed;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+div.debug tr.odd {
+    background-color: #f6f6f6;
+}
+div.debug tr.even {
+    background-color: #ececec;
+}
+div.debug th,
+div.debug td {
+    padding: 3px 8px;
+}
+div.debug th {
+    font-weight: normal;
+    width: 30px;
+    text-align: right;
+    white-space: nowrap;
+}
+div.debug pre,
+div.debug div {
+    margin: 0;
+    overflow-x: auto;
+}
+div.debug pre code.sql {
+    padding: 0;
+}
+
+div.debug div table {
+    width: auto;
+    table-layout: auto;
+    border-collapse: collapse;
+    margin: 2px 0;
+}
+div.debug div table th,
+div.debug div table td {
+    white-space: nowrap;
+    border: 1px solid #999;
+    text-align: right;
+    padding: 0 8px;
+}
+div.debug div table th {
+    background-color: #ccc;
+}
+
+</style>
+<div class="debug">
+    <h4>【トレース】</h4>
+    <?php
+        foreach ($traceCollection as $traceKey => $tempTraceCollection)
+        {
+            // ストリームごとのタイトル
+            printf(
+                '<h5 onclick="$(this).next().toggle();">%s</h5>' . "\n",
+                strlen($traceKey) < 1 ? "(none)" : nl2br($traceKey)
+            );
+
+            // ストリームごとの一覧
+            printf(
+                "<table%s>\n",
+                $traceKey !== "sql" ? "" : ' style="display: none;"' // SQLはデフォルト非表示
+            );
+
+            foreach ($tempTraceCollection as $number => $trace)
+            {
+                // 明細行
+                printf(
+                    '
+                        <tr class="%s">
+                            %s
+                            <td>%s</td>
+                        </tr>
+                    ',
+                    $number % 2 !== 0 ? "odd" : "even",
+                    $traceKey !== "sql" ? sprintf('<th>%s</th>', $number) : "",
+                    $trace
+                );
+            }
+
+            echo "</table>\n";
+        }
+    ?>
+</div>
