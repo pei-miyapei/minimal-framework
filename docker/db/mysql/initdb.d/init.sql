@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS dev_db;
 
 USE dev_db;
 
-CREATE TABLE IF NOT EXISTS `throwable_log` (
+CREATE TABLE IF NOT EXISTS `throwable_logs` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `request_controller_path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `request_action` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
