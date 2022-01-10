@@ -6,8 +6,8 @@ namespace App\Config;
 
 use App\Config\Exception\NotNotifiedException;
 use App\Entity\Service\FileLogService;
+use Dependency\Dependency;
 use SmallFramework\Core\Config\ConfigService;
-use SmallFramework\Core\Dependency;
 //use SmallFramework\Core\Entity\Model\ThrowableLogModel;
 //use SmallFramework\Core\Entity\Service\CommandExecutionService;
 //use SmallFramework\Core\Entity\Service\ErrorHandlerService;

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace SmallFramework\Core\Controller;
 
-use SmallFramework\Core\Dependency;
+use Dependency\Dependency;
 use SmallFramework\Core\Entity\Collection\MessageCollection;
 use SmallFramework\Core\Feature\DefaultScreen\DefaultScreenInputData;
 use SmallFramework\Core\Feature\DefaultScreen\DefaultScreenInteractor;

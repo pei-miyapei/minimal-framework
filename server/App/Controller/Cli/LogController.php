@@ -7,7 +7,7 @@ namespace App\Controller\Cli;
 use App\Controller\ControllerBase;
 use App\Feature\Cli\Log\UseCase\ThrowableLogCreateInputData;
 use App\Feature\Cli\Log\UseCase\ThrowableLogCreateInteractor;
-use SmallFramework\Core\Dependency;
+use Dependency\Dependency;
 use SmallFramework\Core\Entity\Service\Request\CommandRequestService;
 
 /**

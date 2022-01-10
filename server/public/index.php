@@ -6,11 +6,11 @@ use App\Config\BasicPreferenceService;
 // use SmallFramework\Core\Config\BasicPreferenceService;
 use App\Config\EnvironmentService;
 // use SmallFramework\Core\Config\EnvironmentService;
+use Dependency\Dependency;
 use SmallFramework\Core\Config\BasicPreferenceServiceInterface;
 use SmallFramework\Core\Config\DatabaseService;
 use SmallFramework\Core\Config\DatabaseServiceInterface;
 use SmallFramework\Core\Config\EnvironmentServiceInterface;
-use SmallFramework\Core\Dependency;
 
 // 定数：プロジェクトルートまでのサーバ内部パス
 define('BaseServerPath', dirname(__DIR__));
@@ -19,7 +19,10 @@ define('ServerPathToFronController', __FILE__);
 // 定数：Configディレクトリまでのサーバ内部パス
 define('ServerPathToConfigDirectory', BaseServerPath.'/App/Config');
 
-require_once dirname(__DIR__).'/SmallFramework/Core/BootStrap.php';
+// composer
+require_once BaseServerPath.'/vendor/autoload.php';
+
+require_once BaseServerPath.'/SmallFramework/Core/BootStrap.php';
 
 // 各種設定クラスをインターフェースに関連付け
 // 基本設定・ハンドラ

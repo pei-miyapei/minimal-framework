@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace SmallFramework\Core\Entity\Service;
 
-use SmallFramework\Core\Dependency;
+use Dependency\Dependency;
 
 class ExceptionHandlerService
 {

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace SmallFramework\Core;
 
+use Dependency\Dependency;
 use SmallFramework\Core\Entity\Service\ApplicationService;
 use SmallFramework\Core\Entity\Service\Request\CommandRequestService;
 use SmallFramework\Core\Entity\Service\Request\RequestService;

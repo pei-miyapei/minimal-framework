@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace SmallFramework\Core\Controller\Scaffold;
 
+use Dependency\Dependency;
 use SmallFramework\Core\Config\DatabaseServiceInterface;
 use SmallFramework\Core\Config\EnvironmentServiceInterface;
 use SmallFramework\Core\Controller\DefaultController;
-use SmallFramework\Core\Dependency;
 use SmallFramework\Core\Entity\Service\Request\RequestServiceInterface;
 use SmallFramework\Core\Feature\Scaffold\ModelCreateInputData;
 use SmallFramework\Core\Feature\Scaffold\ModelCreateInteractor;

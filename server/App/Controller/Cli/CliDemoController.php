@@ -8,7 +8,7 @@ use App\Config\Environment\PdoConnection1Interface;
 use App\Config\Exception\NotNotifiedException;
 use App\Controller\ControllerBase;
 use App\Gateway\DataAccess\DualRepository;
-use SmallFramework\Core\Dependency;
+use Dependency\Dependency;
 use SmallFramework\Core\Entity\Service\Request\CommandRequestService;
 
 /**

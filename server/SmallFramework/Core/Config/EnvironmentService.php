@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace SmallFramework\Core\Config;
 
+use Dependency\Dependency;
 use SmallFramework\Core\Config\Enum\Environment;
-use SmallFramework\Core\Dependency;
 
 /**
  * 環境サービス

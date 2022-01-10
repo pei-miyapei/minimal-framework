@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace SmallFramework\Core\Config;
 
+use Dependency\Dependency;
 use SmallFramework\Core\Controller\DefaultController;
 use SmallFramework\Core\Debug;
-use SmallFramework\Core\Dependency;
 use SmallFramework\Core\Entity\Service\ErrorHandlerService;
 use SmallFramework\Core\Entity\Service\ExceptionHandlerService;
 use SmallFramework\Core\Entity\Service\ShutdownHandlerService;

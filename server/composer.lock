@@ -4,8 +4,41 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2fd195743ae6324647497c0282040a99",
-    "packages": [],
+    "content-hash": "5642c2374ba4c442252eb4fb05419695",
+    "packages": [
+        {
+            "name": "dependency/dependency",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pei-miyapei/dependency.git",
+                "reference": "b468f2fcebb1c2bc8bb67ee1711f43edea91b25f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pei-miyapei/dependency/zipball/b468f2fcebb1c2bc8bb67ee1711f43edea91b25f",
+                "reference": "b468f2fcebb1c2bc8bb67ee1711f43edea91b25f",
+                "shasum": ""
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "dev-master",
+                "phpunit/phpunit": "10.0.x-dev"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dependency\\": "src/"
+                }
+            },
+            "description": "DI補助",
+            "support": {
+                "source": "https://github.com/pei-miyapei/dependency/tree/main",
+                "issues": "https://github.com/pei-miyapei/dependency/issues"
+            },
+            "time": "2022-01-10T09:37:55+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "composer/pcre",
@@ -4030,8 +4063,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "dependency/dependency": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

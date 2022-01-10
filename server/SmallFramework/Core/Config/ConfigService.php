@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace SmallFramework\Core\Config;
 
-use SmallFramework\Core\Dependency;
+use Dependency\Dependency;
 use SmallFramework\Core\Entity\Service\ConvertCaseService;
 
 final class ConfigService

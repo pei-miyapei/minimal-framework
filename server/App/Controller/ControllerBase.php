@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Dependency\Dependency;
 use SmallFramework\Core\Config\ConfigService;
 use SmallFramework\Core\Config\DatabaseServiceInterface;
 use SmallFramework\Core\Config\EnvironmentServiceInterface;
 use SmallFramework\Core\Controller\DefaultController;
-use SmallFramework\Core\Dependency;
 
 /**
  * コントローラー共通の機能実装例

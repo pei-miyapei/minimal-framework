@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Feature\Demo\UseCase\DemoPageInteractor;
-use SmallFramework\Core\Dependency;
+use Dependency\Dependency;
 
 /**
  * Demo

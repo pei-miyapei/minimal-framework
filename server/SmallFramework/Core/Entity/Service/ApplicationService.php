@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace SmallFramework\Core\Entity\Service;
 
+use Dependency\Dependency;
 use SmallFramework\Core\Config\BasicPreferenceServiceInterface;
 use SmallFramework\Core\Controller\DefaultController;
-use SmallFramework\Core\Dependency;
 
 /**
  * リクエストされたコントローラとアクションを判定し、

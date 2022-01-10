@@ -2,5 +2,15 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.4",
         "phpunit/phpunit": "^9.5"
+    },
+    "minimum-stability": "dev",
+    "repositories": {
+        "dependency/dependency": {
+            "type": "vcs",
+            "url": "git@github.com:pei-miyapei/dependency.git"
+        }
+    },
+    "require": {
+        "dependency/dependency": "dev-main"
     }
 }
