@@ -11,6 +11,12 @@
 その後実際に Web システム案件、バッチ、公開 API 等々の作成で使用したり  
 既存のシステム内に部分的に配置して利用したもの
 
+### 追記
+
+自動 DI 用の Dependency クラス群もコアクラスとして直接組み込まれていましたが  
+独立した別リポジトリ（[pei-miyapei/dependency](https://github.com/pei-miyapei/dependency)）に登録し composer ライブラリとして扱えるようにしたので  
+内部のクラスは削除し composer install して利用するように変更
+
 ### 現在の状態について
 
 Docker 環境、PHP8/8.1 で利用できるよう一応多少調整した状態にしてありますが当面もう使用することもなく、  
