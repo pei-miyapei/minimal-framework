@@ -13,7 +13,7 @@
 
 ### 追記
 
-自動 DI 用の Dependency クラス群もコアクラスとして直接組み込まれていましたが  
+DI 用の Dependency クラス群もコアクラスとして直接組み込まれていましたが  
 独立した別リポジトリ（[pei-miyapei/dependency](https://github.com/pei-miyapei/dependency)）に登録し composer ライブラリとして扱えるようにしたので  
 内部のクラスは削除し composer install して利用するように変更
 
