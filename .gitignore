@@ -1,2 +1,3 @@
 server/vendor/
 docker/db/mysql/data
+server/auth.json
